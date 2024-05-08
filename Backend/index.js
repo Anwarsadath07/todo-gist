@@ -12,7 +12,7 @@ app.use(
   cors({
     credentials: true,
     origin: [
-      "http://localhost:3001",
+      "https://todo-gist.vercel.app",
     ],
     methods: ["POST", "GET", "PUT", "DELETE"],
   })
