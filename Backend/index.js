@@ -8,7 +8,15 @@ const projectRoutes = require('./routes/projectRoutes');
 const app = express();
 
 
-app.use(cors());
+app.use(
+  cors({
+    credentials: true,
+    origin: [
+      "http://localhost:3001",
+    ],
+    methods: ["POST", "GET", "PUT", "DELETE"],
+  })
+);
 
 app.use(express.json());
 
